@@ -22,9 +22,9 @@ app.get("/", (_req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(port, () => {
-  console.log(`Listening on port http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Listening on port http://localhost:${port}`);
+// });
 
 //DB connection
 if (!process.env.MONGODB_URI) {
@@ -46,3 +46,5 @@ mongoose
 // //myroutes
 app.use("/api", authRoutes);
 app.use("/api", blogRoutes);
+
+module.exports = app;

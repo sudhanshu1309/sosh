@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "NODE_ENV=test jest --testTimeout=5000"
   },
   "author": "sudhanshu",
   "license": "MIT",
@@ -16,5 +18,9 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.0",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "jest": "^29.4.1",
+    "supertest": "^6.3.3"
   }
 }
